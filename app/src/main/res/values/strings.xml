@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyCV</string>
+    <string name="stringHintAboutMe">Here goes something about me</string>
+    <string name="loremIpsum">lol, work exp</string>
+</resources>

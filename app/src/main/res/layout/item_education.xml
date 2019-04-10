@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="@dimen/sizeOfPadding"
+        android:layout_margin="@dimen/sizeOfPadding"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:id="@+id/tvEducationStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:hint="@string/app_name"
+    />
+    <TextView
+            android:id="@+id/tvEducationEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvEducationStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:hint="@string/app_name"
+    />
+    <TextView
+            android:id="@+id/tvEducationFaculty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvEducationEnd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:hint="@string/app_name"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
