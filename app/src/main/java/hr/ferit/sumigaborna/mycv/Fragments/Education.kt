@@ -27,10 +27,15 @@ class Education: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.education,container,false)
-        educationDisplay.layoutManager = LinearLayoutManager(this,RecyclerView.VERTICAL,false)
-        educationDisplay.itemAnimator = DefaultItemAnimator()
-        educationDisplay.addItemDecoration(DividerItemDecoration(this, RecyclerView.VERTICAL))
+
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        educationDisplay.layoutManager = LinearLayoutManager(activity,RecyclerView.VERTICAL,false)
+        educationDisplay.itemAnimator = DefaultItemAnimator()
+        educationDisplay.addItemDecoration(DividerItemDecoration(activity, RecyclerView.VERTICAL))
+        educationDisplay.adapter = EducationAdapter(EducationRepository.educations)
+    }
 }

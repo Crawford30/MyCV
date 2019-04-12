@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hr.ferit.sumigaborna.mycv.R
+import hr.ferit.sumigaborna.mycv.RecyclerView.Adapter.WorkExperienceAdapter
+import hr.ferit.sumigaborna.mycv.RecyclerView.Repository.WorkRepository
 import kotlinx.android.synthetic.main.workexperience.*
 
 class WorkExperience:Fragment (){
@@ -22,9 +24,16 @@ class WorkExperience:Fragment (){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.workexperience,container,false)
-        workexpDisplay.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        workexpDisplay.itemAnimator = DefaultItemAnimator()
-        workexpDisplay.addItemDecoration(DividerItemDecoration(this, RecyclerView.VERTICAL))
+
         return view
+    }
+    
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        workexpDisplay.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        workexpDisplay.itemAnimator = DefaultItemAnimator()
+        workexpDisplay.addItemDecoration(DividerItemDecoration(activity, RecyclerView.VERTICAL))
+        workexpDisplay.adapter = WorkExperienceAdapter(WorkRepository.works)
+
     }
 }

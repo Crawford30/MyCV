@@ -36,7 +36,5 @@ class MainActivity : AppCompatActivity() {
 
     fun displayData() {
 
-        educationDisplay.adapter = EducationAdapter(EducationRepository.educations)
-        //workexpDisplay.adapter = WorkExperienceAdapter(WorkRepository.works)
     }
 }
